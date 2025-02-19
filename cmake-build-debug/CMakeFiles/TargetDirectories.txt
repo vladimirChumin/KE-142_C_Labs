@@ -1,0 +1,3 @@
+/home/vol/CLionProjects/C++_Labs/cmake-build-debug/CMakeFiles/untitled.dir
+/home/vol/CLionProjects/C++_Labs/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vol/CLionProjects/C++_Labs/cmake-build-debug/CMakeFiles/rebuild_cache.dir
