@@ -4,8 +4,6 @@
 
 using namespace std;
 
-// ========== PART 1 (Calculator) ==========
-
 double addNumbers(double a, double b) {
     return a + b;
 }
@@ -22,7 +20,7 @@ double deliNumbers(double a, double b) {
     return a / b;
 }
 
-void task1() {
+void calculate() {
     char operation;
     double num1, num2;
     string result;
@@ -140,18 +138,10 @@ void task2_2() {
     }
 }
 
-// ========== SINGLE MAIN FOR ALL ==========
-
 int main() {
-    // Запуск всех трёх частей по очереди:
-    task1();
-    cout << endl;
-
+    calculate();
     task2_1();
-    cout << endl;
-
     task2_2();
-    cout << endl;
 
     return 0;
 }
