@@ -2,33 +2,27 @@
 #include <string>
 #include <cmath>
 
-int addNumbers(int a, int b) {
-  int result;
-  result = a + b;
-  return result;
+using namespace std;
 
+// ========== PART 1 (Calculator) ==========
+
+double addNumbers(double a, double b) {
+    return a + b;
 }
-int minusNumbers(int a, int b) {
-  int result;
-  result = a - b;
-  return result;
+
+double minusNumbers(double a, double b) {
+    return a - b;
+}
+
+double multiplyNumbers(double a, double b) {
+    return a * b;
 }
 
 double deliNumbers(double a, double b) {
-  double result;
-  result = a / b;
-  return result;
+    return a / b;
 }
 
-int multiplyNumbers(int a, int b) {
-  int result;
-  result = a * b;
-  return result;
-}
-
-int main()
-{
-    using namespace std;
+void task1() {
     char operation;
     double num1, num2;
     string result;
@@ -44,101 +38,120 @@ int main()
     cin >> operation;
 
     switch (operation) {
-    case '+':
-        result = to_string(addNumbers(num1, num2));
-        break;
-    case '-':
-        result = to_string(minusNumbers(num1, num2));
-        break;
-    case '*':
-        result = to_string(multiplyNumbers(num1, num2));
-        break;
-    case '/':
-        if (num2 != 0) {
-            result = to_string(deliNumbers(num1, num2));
+        case '+':
+            result = to_string(addNumbers(num1, num2));
+            break;
+        case '-':
+            result = to_string(minusNumbers(num1, num2));
+            break;
+        case '*':
+            result = to_string(multiplyNumbers(num1, num2));
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = to_string(deliNumbers(num1, num2));
+            } else {
+                result = "Error: Division by zero";
+            }
+            break;
+        default:
+            result = "Error: Invalid operator";
+            cout << "Result: " << result << endl;
+            return;
+    }
+    cout << "Result: " << result << endl;
+}
+
+// ========== PART 2.1 (Prime check & Multiplication table) ==========
+
+bool isPrime(int num) {
+    if (num <= 1) return false;
+    for (int i = 2; i <= sqrt(num); ++i) {
+        if (num % i == 0) {
+            return false;
         }
-        else {
-            result = "Error: Division by zero";
+    }
+    return true;
+}
+
+void printMultiplicationTable(int num) {
+    for (int i = 1; i <= 9; i++) {
+        cout << num << " x " << i << " = " << (num * i) << endl;
+    }
+}
+
+void task2_1() {
+    for (int i = 1; i <= 5; i++) {
+        int num;
+        cout << "Enter number #" << i << ": ";
+        cin >> num;
+
+        if (isPrime(num)) {
+            cout << "It's a prime number" << endl;
+        } else {
+            cout << "It's not a prime number" << endl;
         }
-        break;
-    default:
-            result = "Error";
-        return 1;
+        printMultiplicationTable(num);
+        cout << "----------------" << endl;
+    }
+}
+
+// ========== PART 2.2 (Power with overload) ==========
+
+int power(int base, int exponent) {
+    if (exponent == 0) return 1;
+    return base * power(base, exponent - 1);
+}
+
+double power(double base, int exponent) {
+    if (exponent == 0) return 1.0;
+    return base * power(base, exponent - 1);
+}
+
+void task2_2() {
+    int exponent;
+    char baseType;
+
+    cout << "Enter 'i' for integer base or 'd' for floating-point base: ";
+    cin >> baseType;
+
+    cout << "Enter the exponent (non-negative integer): ";
+    cin >> exponent;
+
+    if (exponent < 0) {
+        cout << "Exponent must be non-negative." << endl;
+        return;
     }
 
-    cout << "Your result is: " << result << endl;
-    return 0;
-}
-
- // Задание 2.1
-bool isPrime(int num) {
-  if (num <= 1) return false;
-  for (int i = 2; i <= sqrt(num); ++i) {
-    if (num % i == 0) return false;
-  }
-  return true;
-}
-
-int printMultiplicationTable(int num) {
-  for (int i = 1; i <= 9; i++) {
-    std::cout << num * i << std::endl;
-  }
-  return 0;
-}
-
-int main() {
-  using namespace std;
-
-  for (int i = 1; i <= 5; i++) {
-    int num;
-
-    cout << "Enter " << i << " number" << endl;
-    cin >> num;
-    if (isPrime(num)) {
-      cout << "It's prime number\n";
+    if (baseType == 'i') {
+        int intBase;
+        cout << "Enter the integer base: ";
+        cin >> intBase;
+        cout << "Result: " << power(intBase, exponent) << endl;
+    }
+    else if (baseType == 'd') {
+        double doubleBase;
+        cout << "Enter the floating-point base: ";
+        cin >> doubleBase;
+        cout << "Result: " << power(doubleBase, exponent) << endl;
     }
     else {
-      cout << "It's not prime number\n";
+        cout << "Invalid base type." << endl;
     }
-    printMultiplicationTable(num);
-  }
 }
 
- // Задание 2.2
-using namespace std;
-int power(int base, int exponent) {
-  if (exponent == 0) return 1;
-  return base * power(base, exponent - 1);
-}
-double power(double base, int exponent) {
-  if (exponent == 0) return 1.0;
-  return base * power(base, exponent - 1);
-}
+// ========== SINGLE MAIN FOR ALL ==========
 
 int main() {
-  int intBase, exponent;
-  double doubleBase;
-  char baseType;
-  cout << "Введите 'i' для целочисленного основания или 'd' для основания с плавающей запятой: ";
-  cin >> baseType;
-  cout << "Введите показатель степени (неотрицательное целое число): ";
-  cin >> exponent;
-  if (exponent < 0) {
-    cout << "Показатель степени должен быть неотрицательным." << endl;
-    return 1;
-  }
-  if (baseType == 'i') {
-    cout << "Введите целочисленное основание: ";
-    cin >> intBase;
-    cout << "Результат: " << power(intBase, exponent) << endl;
-  }
-  else if (baseType == 'd') {
-    cout << "Введите основание с плавающей запятой: ";
-    cin >> doubleBase;
-    cout << "Результат: " << power(doubleBase, exponent) << endl;
-  }
-  else {
-    cout << "Неверный тип основания." << endl;
-  }
-  return 0;
+    // Запуск всех трёх частей по очереди:
+    task1();
+    cout << endl;
+
+    task2_1();
+    cout << endl;
+
+    task2_2();
+    cout << endl;
+
+    return 0;
 }
