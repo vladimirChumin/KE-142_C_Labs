@@ -11,6 +11,10 @@ int helloWorld()
 }
 
 //Задание 1.2
+#include <iostream>
+#include <string>
+#include <sstream>
+
 int calculate()
 {
     using namespace std;
@@ -56,6 +60,11 @@ int calculate()
 }
 
 //Задание 1.3
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <locale>
+
 int cycle() {
     using namespace std;
     setlocale(LC_ALL, "");
