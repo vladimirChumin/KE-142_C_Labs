@@ -101,6 +101,19 @@ public:
         return Result;
     }
 
+    Polynomial operator= (const Polynomial& other) {
+        if (this == &other) return *this;
+
+
+        delete [] this -> coefficients;
+        this -> index = other.index;
+        this -> coefficients = new int[this -> index];
+
+        for (int i = 0; i < this -> index; i++) {
+            this -> coefficients[i] = other.coefficients[i];
+        }
+    }
+
     ~Polynomial() {
         delete[] coefficients;
     }
