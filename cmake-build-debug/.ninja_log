@@ -1,14 +1,12 @@
 # ninja log v6
 1	19	1740060449645726086	CMakeFiles/untitled.dir/main.cpp.o	bfb2706fe50544d3
 19	43	1740060449663725479	CMakeFiles/untitled.dir/Lab6/lab_6.cpp.o	ba84b1c17f0ab4b0
-43	63	1740060449687724669	CMakeFiles/untitled.dir/Lab7/lab_7.cpp.o	69bf4b177e2cae51
-63	74	1740060449707723995	CMakeFiles/untitled.dir/Lab8/lab_8.cpp.o	e24f0ffb33c4a8a1
-74	85	1740060449718723624	CMakeFiles/untitled.dir/Lab9/lab_9.cpp.o	c9191bb6a77f1467
-85	96	1740060449729723253	CMakeFiles/untitled.dir/Lab10/lab_10.cpp.o	541af54c77873241
-2	420	1740060449646726053	CMakeFiles/untitled.dir/Lab3/lab_3.cpp.o	1d117e9236f8097e
-1	462	1740060449645726086	CMakeFiles/untitled.dir/Lab1/lab_1.cpp.o	d9b8059ea096114e
-2	492	1740060449646726053	CMakeFiles/untitled.dir/Lab4/lab_4.cpp.o	65d31012fbcd7543
-3	510	1740060449647726019	CMakeFiles/untitled.dir/Lab5/lab_5.cpp.o	13ddfd8a4e73b0a0
 1	607	1740060449645726086	CMakeFiles/untitled.dir/Lab2/lab_2.cpp.o	d40fbd8bef8deff3
-5	462	1740319586763303631	CMakeFiles/untitled.dir/Lab4/lab_4.cpp.o	65d31012fbcd7543
+43	63	1740060449687724669	CMakeFiles/untitled.dir/Lab7/lab_7.cpp.o	69bf4b177e2cae51
 4	464	1740319586762303648	CMakeFiles/untitled.dir/Lab1/lab_1.cpp.o	d9b8059ea096114e
+63	74	1740060449707723995	CMakeFiles/untitled.dir/Lab8/lab_8.cpp.o	e24f0ffb33c4a8a1
+85	96	1740060449729723253	CMakeFiles/untitled.dir/Lab10/lab_10.cpp.o	541af54c77873241
+5	462	1740319586763303631	CMakeFiles/untitled.dir/Lab4/lab_4.cpp.o	65d31012fbcd7543
+74	85	1740060449718723624	CMakeFiles/untitled.dir/Lab9/lab_9.cpp.o	c9191bb6a77f1467
+2	420	1740060449646726053	CMakeFiles/untitled.dir/Lab3/lab_3.cpp.o	1d117e9236f8097e
+3	510	1740060449647726019	CMakeFiles/untitled.dir/Lab5/lab_5.cpp.o	13ddfd8a4e73b0a0
