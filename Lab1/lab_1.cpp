@@ -114,7 +114,7 @@ int cycle() {
 
 
 int main() {
-    // helloWorld();
+    helloWorld();
     // calculate();
     cycle();
     return 0;

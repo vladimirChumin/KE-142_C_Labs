@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-
+#include <windows.h>
 using namespace std;
 
 double addNumbers(double a, double b) {
@@ -24,6 +24,7 @@ void calculate() {
     char operation;
     double num1, num2;
     string result;
+    bool isProcess = true;
 
     cout << "Enter first number: ";
     cin >> num1;
@@ -95,52 +96,49 @@ void task2_1() {
 }
 
 // ========== PART 2.2 (Power with overload) ==========
-
 int power(int base, int exponent) {
     if (exponent == 0) return 1;
     return base * power(base, exponent - 1);
 }
-
 double power(double base, int exponent) {
     if (exponent == 0) return 1.0;
     return base * power(base, exponent - 1);
 }
 
-void task2_2() {
-    int exponent;
+int task2_2()
+{
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    int intBase, exponent;
+    double doubleBase;
     char baseType;
-
-    cout << "Enter 'i' for integer base or 'd' for floating-point base: ";
+    cout << "Введите 'i' для целочисленного основания или 'd' для основания с плавающей запятой: ";
     cin >> baseType;
-
-    cout << "Enter the exponent (non-negative integer): ";
+    cout << "Введите показатель степени (неотрицательное целое число): ";
     cin >> exponent;
-
     if (exponent < 0) {
-        cout << "Exponent must be non-negative." << endl;
-        return;
+        cout << "Показатель степени должен быть неотрицательным." << endl;
+        return 1;
     }
-
     if (baseType == 'i') {
-        int intBase;
-        cout << "Enter the integer base: ";
+        cout << "Введите целочисленное основание: ";
         cin >> intBase;
-        cout << "Result: " << power(intBase, exponent) << endl;
+        cout << "Результат: " << power(intBase, exponent) << endl;
     }
     else if (baseType == 'd') {
-        double doubleBase;
-        cout << "Enter the floating-point base: ";
+        cout << "Введите основание с плавающей запятой: ";
         cin >> doubleBase;
-        cout << "Result: " << power(doubleBase, exponent) << endl;
+        cout << "Результат: " << power(doubleBase, exponent) << endl;
     }
     else {
-        cout << "Invalid base type." << endl;
+        cout << "Неверный тип основания." << endl;
     }
+    return 0;
 }
 
 int main() {
-    calculate();
-    task2_1();
+    // // calculate();
+    // task2_1();
     task2_2();
 
     return 0;

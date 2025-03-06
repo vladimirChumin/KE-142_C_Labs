@@ -13,4 +13,11 @@ add_executable(untitled main.cpp
         Lab7/lab_7.cpp
         Lab8/lab_8.cpp
         Lab9/lab_9.cpp
-        Lab10/lab_10.cpp)
+        Lab10/lab_10.cpp
+        Lab8/DataHandler.cpp
+        Lab8/DataHandler.h
+        Lab8/DataProcessors.cpp
+        Lab8/DataProcessors.h
+        Lab8/miniFunctions.cpp
+        Lab8/miniFunctions.h
+)

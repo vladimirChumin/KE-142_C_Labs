@@ -1,4 +1,12 @@
 #include <iostream>
+#include <list>
+#include "locale.h"
+using namespace std;
+
+int main() {
+    std::cout << "Hellow, world" << std::endl;
+}
+#include <iostream>
 #include <fstream>
 #include <vector>
 #include <string>
