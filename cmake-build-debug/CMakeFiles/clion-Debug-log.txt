@@ -1,4 +1,4 @@
-"D:\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S C:\Users\Вололимир\Desktop\KE-142_C_Labs -B C:\Users\Вололимир\Desktop\KE-142_C_Labs\cmake-build-debug
--- Configuring done (1.4s)
--- Generating done (0.1s)
--- Build files have been written to: C:/Users/Вололимир/Desktop/KE-142_C_Labs/cmake-build-debug
+Cannot generate into /home/vol/CLionProjects/C++_Labs
+It was created with incompatible generator 'Unix Makefiles'
+
+Please either delete it manually or select another generation directory

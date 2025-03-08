@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include <windows.h>
 using namespace std;
 
 double addNumbers(double a, double b) {
@@ -107,8 +106,6 @@ double power(double base, int exponent) {
 
 int task2_2()
 {
-    SetConsoleOutputCP(CP_UTF8);
-    SetConsoleCP(CP_UTF8);
     int intBase, exponent;
     double doubleBase;
     char baseType;
